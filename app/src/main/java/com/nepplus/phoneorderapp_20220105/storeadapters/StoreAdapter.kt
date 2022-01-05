@@ -36,6 +36,9 @@ class StoreAdapter(
 //                Intent로 화면 이동
 
                 val myIntent = Intent(mContext, ViewStoreDetailActivity::class.java)
+
+                myIntent.putExtra("store",data)
+
                 mContext.startActivity(myIntent)
 
             }
