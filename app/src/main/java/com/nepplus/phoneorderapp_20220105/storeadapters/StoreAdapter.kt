@@ -17,6 +17,9 @@ class StoreAdapter(
 
     inner class MyViewHolder(row: View) : RecyclerView.ViewHolder(row) {
 
+        fun bind(data: StoreData) {
+
+        }
 
     }
 
@@ -29,7 +32,7 @@ class StoreAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-//        holder.bind( mList[position] )
+        holder.bind( mList[position] )
 
     }
 
