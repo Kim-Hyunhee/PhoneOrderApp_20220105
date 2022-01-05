@@ -4,10 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.nepplus.phoneorderapp_20220105.R
 import com.nepplus.phoneorderapp_20220105.models.StoreData
+import de.hdodenhof.circleimageview.CircleImageView
 
 
 class StoreAdapter(
@@ -17,7 +19,12 @@ class StoreAdapter(
 
     inner class MyViewHolder(row: View) : RecyclerView.ViewHolder(row) {
 
+        val imgLogo = row.findViewById<ImageView>(R.id.imgLogo)
+        val txtStoreName = row.findViewById<TextView>(R.id.txtStoreName)
+
         fun bind(data: StoreData) {
+
+            txtStoreName.text = data.name
 
         }
 
